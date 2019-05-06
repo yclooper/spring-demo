@@ -6,6 +6,5 @@ spring:
       server:
         git:
           uri: https://github.com/yclooper/spring-demo-config
-
 server:
-  port: 8088
+  port: 8888
