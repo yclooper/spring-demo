@@ -12,6 +12,8 @@
     <modules>
         <module>spring-eureka</module>
         <module>base</module>
+        <module>spring-consumer</module>
+        <module>spring-provider</module>
     </modules>
 
 </project>
