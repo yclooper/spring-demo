@@ -15,6 +15,7 @@
         <module>spring-consumer</module>
         <module>spring-provider</module>
         <module>spring-config</module>
+        <module>config-client</module>
     </modules>
 
 </project>
