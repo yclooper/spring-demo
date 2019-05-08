@@ -10,3 +10,4 @@ gen
 /spring-consumer/.mvn
 /spring-provider/.mvn
 /config-client/.mvn
+/spring-zuul/.mvn

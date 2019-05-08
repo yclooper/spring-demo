@@ -16,6 +16,7 @@
         <module>spring-provider</module>
         <module>spring-config</module>
         <module>config-client</module>
+        <module>spring-zuul</module>
     </modules>
 
 </project>
