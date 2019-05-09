@@ -11,3 +11,4 @@ gen
 /spring-provider/.mvn
 /config-client/.mvn
 /spring-zuul/.mvn
+/spring-admin/.mvn

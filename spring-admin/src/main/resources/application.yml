@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-admin
+server:
+  port: 8089
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

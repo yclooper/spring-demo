@@ -9,3 +9,11 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://localhost:${server.port}/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

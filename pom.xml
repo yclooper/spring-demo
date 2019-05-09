@@ -17,6 +17,7 @@
         <module>spring-config</module>
         <module>config-client</module>
         <module>spring-zuul</module>
+        <module>spring-admin</module>
     </modules>
 
 </project>
