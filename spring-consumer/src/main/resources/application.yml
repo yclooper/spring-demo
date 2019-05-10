@@ -20,3 +20,5 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+logging:
+  file: logs/console.log

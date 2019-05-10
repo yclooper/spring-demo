@@ -20,4 +20,8 @@ public class SpringZuulApplication {
         return new TokenFilter();
     }
 
+    @Bean
+    public LimitFilter limitFilter() {
+        return new LimitFilter();
+    }
 }
