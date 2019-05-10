@@ -2,16 +2,8 @@ spring:
   application:
     name: spring-provider
 server:
-  port: 8086
+  port: 8085
 eureka:
   client:
     service-url:
       defaultZone : http://localhost:8761/eureka/
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS

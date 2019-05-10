@@ -10,7 +10,7 @@ public class TestController {
     @Value("${server.port}")
     private String port;
     @RequestMapping("/hello")
-    public String hello(String name) {
+    public String hello() {
         return "this provider return: " + port ;
     }
 }
