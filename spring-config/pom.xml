@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.yclooper</groupId>
-    <artifactId>spring-demo-config</artifactId>
+    <artifactId>spring-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-demo-config</name>
     <description>Demo project for Spring Boot</description>
