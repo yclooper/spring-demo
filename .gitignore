@@ -12,3 +12,4 @@ gen
 /config-client/.mvn
 /spring-zuul/.mvn
 /spring-admin/.mvn
+/spring-log/.mvn
