@@ -13,3 +13,4 @@ gen
 /spring-zuul/.mvn
 /spring-admin/.mvn
 /spring-log/.mvn
+/spring-swagger/.mvn
