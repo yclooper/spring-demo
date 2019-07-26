@@ -14,3 +14,4 @@ gen
 /spring-admin/.mvn
 /spring-log/.mvn
 /spring-swagger/.mvn
+/spring-redis/.mvn
