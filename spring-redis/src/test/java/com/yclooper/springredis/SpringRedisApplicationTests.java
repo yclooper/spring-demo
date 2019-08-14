@@ -31,6 +31,9 @@ public class SpringRedisApplicationTests {
     public void func1() {
         stringRedisTemplate.opsForValue().set("bb", "123");
         Assert.assertEquals("123", stringRedisTemplate.opsForValue().get("bb"));
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        System.out.println(valueOperations.size(String.class));
+
     }
 
     @Test
@@ -45,6 +48,12 @@ public class SpringRedisApplicationTests {
 
         System.out.println(redisTemplate.opsForValue().get("user"));
         System.out.println(redisTemplate.opsForValue().get("user-t")==null);
+    }
+
+
+    @Test
+    public void func3() {
+
     }
 
 }

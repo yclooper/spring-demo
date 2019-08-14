@@ -20,6 +20,7 @@
         <module>spring-admin</module>
         <module>spring-log</module>
         <module>spring-swagger</module>
+        <module>spring-rabbitmq</module>
     </modules>
 
 </project>
