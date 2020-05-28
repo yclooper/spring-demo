@@ -16,6 +16,5 @@ public class HelloReceiver {
     public void process(String hello) {
         System.out.println("receiver1:" + hello);
     }
-
 }
 

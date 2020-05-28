@@ -20,11 +20,10 @@ public class UserController {
 
 
     @RequestMapping("/getUser")
-    @Cacheable(value = "user")
+//    @Cacheable(value = "user")
     public User getUser() {
-        User user = new User("tom", "1234586");
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
-        return user;
+        ValueOperations<String,User> valueOperations = redisTemplate.opsForValue();
+        return valueOperations.get("user");
     }
 
 
@@ -42,7 +41,6 @@ public class UserController {
             session.setAttribute("id", 111);
             System.out.println("执行了session");
         }
-
         return session.getAttribute("id")+"";
     }
 }

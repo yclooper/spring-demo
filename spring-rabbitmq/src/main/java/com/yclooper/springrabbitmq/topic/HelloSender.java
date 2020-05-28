@@ -23,5 +23,4 @@ public class HelloSender {
     public void sendUser(User user) {
         amqpTemplate.convertAndSend("object", user);
     }
-
 }
