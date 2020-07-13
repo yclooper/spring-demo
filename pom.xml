@@ -21,6 +21,7 @@
         <module>spring-log</module>
         <module>spring-swagger</module>
         <module>spring-rabbitmq</module>
+        <module>spring-read</module>
     </modules>
 
 </project>
