@@ -1,11 +1,16 @@
 package com.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Created by chen on 2020/7/13.
  */
 public class Cat {
+    @Autowired
+    public Dog dog;
     private String name;
     private String color;
+
 
     public Cat() {
         System.out.println("cat constructor....");
