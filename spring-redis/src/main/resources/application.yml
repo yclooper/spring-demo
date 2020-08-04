@@ -1,0 +1,8 @@
+spring:
+  redis:
+    database: 0
+    host: rediszjctest.redis.rds.aliyuncs.com
+    port: 6380
+    password: QWEasd@1234
+server:
+  port: 8080
