@@ -1,4 +1,4 @@
-package com.yclooper.springshiro.shiro;
+package com.yclooper.springshiro.config.shiro;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
