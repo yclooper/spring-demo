@@ -1,8 +1,15 @@
 spring:
   redis:
     database: 0
-    host: rediszjctest.redis.rds.aliyuncs.com
-    port: 6380
-    password: QWEasd@1234
+    host: 175.102.11.69
+    port: 6379
+    password: Zhujc137246
+    lettuce:
+      pool:
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+        max-active: 8
+    timeout: 3000
 server:
   port: 8080

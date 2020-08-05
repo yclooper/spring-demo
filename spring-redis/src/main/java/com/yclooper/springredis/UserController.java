@@ -29,7 +29,9 @@ public class UserController {
 
     @RequestMapping("/addUser")
     public String addUser() {
-        User user = new User("tom", "123456");
+        User user = new User();
+        user.setUsername("tom");
+        user.setPassword("123456");
         ValueOperations<String, User> operations = redisTemplate.opsForValue();
         operations.set("user", user);
         return "success";

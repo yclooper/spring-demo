@@ -22,6 +22,7 @@
         <module>spring-swagger</module>
         <module>spring-rabbitmq</module>
         <module>spring-read</module>
+        <module>spring-shiro</module>
     </modules>
 
 </project>
