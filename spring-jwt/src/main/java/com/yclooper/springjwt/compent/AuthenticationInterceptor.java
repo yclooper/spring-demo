@@ -19,6 +19,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
 import java.lang.reflect.Method;
 
 /**
@@ -52,7 +53,13 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
             UserLoginToken methodAnnotation = handlerMethod.getMethodAnnotation(UserLoginToken.class);
             if (methodAnnotation.required()) {
                 if (token == null) {
-                    throw  new LoginException("用户token为空，请登录");
+                    response.setContentType("application/json;charset=utf-8");
+                    PrintWriter writer = response.getWriter();
+                    writer.write("token is empty");
+                    writer.close();
+                    response.flushBuffer();
+                    return false;
+//                    throw  new LoginException("用户token为空，请登录");
                 }
                 String userId;
                 try {
