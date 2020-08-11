@@ -4,10 +4,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
@@ -60,6 +63,19 @@ public class SpringRedisApplicationTests {
         redisTemplate.opsForValue().set("user", user);
 
         System.out.println(redisTemplate.opsForValue().get("user"));
+    }
+
+    @Test
+    public void func3() {
+        User user = new User();
+        user.setUsername("tom");
+        user.setPassword("123456");
+        Map<String, Object> map = new HashMap<>();
+        map.put("username", user.getUsername());
+        map.put("password", user.getPassword());
+        redisTemplate.opsForHash().putAll("userHash", map);
+
+        System.out.println(redisTemplate.opsForValue().get("userHash"));
     }
 
 }

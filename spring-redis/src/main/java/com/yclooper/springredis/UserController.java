@@ -20,7 +20,6 @@ public class UserController {
 
 
     @RequestMapping("/getUser")
-//    @Cacheable(value = "user")
     public User getUser() {
         ValueOperations<String,User> valueOperations = redisTemplate.opsForValue();
         return valueOperations.get("user");
