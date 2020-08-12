@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -74,8 +75,7 @@ public class SpringRedisApplicationTests {
         map.put("username", user.getUsername());
         map.put("password", user.getPassword());
         redisTemplate.opsForHash().putAll("userHash", map);
-
-        System.out.println(redisTemplate.opsForValue().get("userHash"));
+        System.out.println(redisTemplate.opsForHash().get("userHash","username"));
     }
 
 }
