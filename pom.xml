@@ -23,6 +23,7 @@
         <module>spring-rabbitmq</module>
         <module>spring-read</module>
         <module>spring-shiro</module>
+        <module>spring-redis</module>
     </modules>
 
 </project>
