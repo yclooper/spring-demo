@@ -13,7 +13,7 @@ import org.springframework.context.annotation.*;
  */
 @Configuration
 @ComponentScan(value = "com.bean")
-@Import({com.color.Red.class,com.color.Yellow.class, MyImportBeanDefinitionRegister.class})
+//@Import({com.color.Red.class,com.color.Yellow.class, MyImportBeanDefinitionRegister.class})
 public class MainConfig {
 
     @Bean
@@ -21,14 +21,19 @@ public class MainConfig {
     public Cat cat() {
         return new Cat();
     }
-    @Conditional(WindowsCondition.class)
-    @Bean("bill")
-    public Person bill() {
-        return new Person("bill");
-    }
-    @Bean("linus")
-    @Conditional(LinuxCondition.class)
-    public Person linus() {
-        return new Person("linus");
+//    @Conditional(WindowsCondition.class)
+//    @Bean("bill")
+//    public Person bill() {
+//        return new Person("bill");
+//    }
+//    @Bean("linus")
+//    @Conditional(LinuxCondition.class)
+//    public Person linus() {
+//        return new Person("linus");
+//    }
+
+    @Bean(initMethod = "initMethod",destroyMethod = "destroy")
+    public Person person() {
+        return new Person("卡卡罗特");
     }
 }

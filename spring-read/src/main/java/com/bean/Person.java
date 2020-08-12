@@ -6,6 +6,14 @@ package com.bean;
 public class Person {
 
     public Person(String name) {
-        System.out.println("init:"+name);
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>init:"+name);
+    }
+
+    public void initMethod() {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>init-method:发生了");
+    }
+
+    public void destroy() {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>destroy:销毁了");
     }
 }
