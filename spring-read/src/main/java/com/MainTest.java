@@ -14,5 +14,6 @@ public class MainTest {
         ApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
         Person bean = context.getBean(Person.class);
         System.out.println(bean);
+        ((AnnotationConfigApplicationContext) context).registerShutdownHook();
     }
 }

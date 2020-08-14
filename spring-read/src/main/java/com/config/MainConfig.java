@@ -2,6 +2,7 @@ package com.config;
 
 import com.bean.Cat;
 import com.bean.Person;
+import com.compent.MyBeanProcessor;
 import com.condition.LinuxCondition;
 import com.condition.MyImportBeanDefinitionRegister;
 import com.condition.WindowsCondition;
@@ -31,8 +32,11 @@ public class MainConfig {
 //    public Person linus() {
 //        return new Person("linus");
 //    }
-
-    @Bean(initMethod = "initMethod",destroyMethod = "destroy")
+    @Bean
+    public MyBeanProcessor MyBeanProcessor() {
+        return new MyBeanProcessor();
+    }
+    @Bean(initMethod = "initMethod",destroyMethod = "initDestroy")
     public Person person() {
         return new Person("卡卡罗特");
     }
