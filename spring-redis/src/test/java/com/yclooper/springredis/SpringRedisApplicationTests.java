@@ -4,14 +4,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.HashOperations;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.data.redis.core.*;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
@@ -76,6 +74,15 @@ public class SpringRedisApplicationTests {
         map.put("password", user.getPassword());
         redisTemplate.opsForHash().putAll("userHash", map);
         System.out.println(redisTemplate.opsForHash().get("userHash","username"));
+    }
+
+    @Test
+    public void func4() {
+        redisTemplate.opsForZSet().add("ll", "张三", 7.89);
+        redisTemplate.opsForZSet().add("ll", "李四", 2.31);
+        redisTemplate.opsForZSet().add("ll", "王五", 10.12);
+        redisTemplate.opsForZSet().reverseRange("ll", 0, -1).stream().forEach(System.out::println);
+
     }
 
 }
